@@ -4,12 +4,18 @@
 
 1. [Download and install node.js](https://nodejs.org/en/ "Download and install node.js")
 2. Clone the repository
-3. Open up your system console.
-4. Run command:
+3. Open up your system console
+4. Run the following commands:
 
 ```
 cd *directory*\WeatherPI
+```
+
+```
 npm install react-scripts react-bootstrap google-map-react
+```
+
+```
 npm run start
 ```
 
