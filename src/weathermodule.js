@@ -10,13 +10,29 @@ const mapStyles = {
 class Weathermodule extends Component {
   render() {
     return (
-      <div>
+      <div className="weatherModule">
         <Map
+          className="mapStyle"
           google={this.props.google}
-          zoom={13}
+          zoom={17}
           style={mapStyles}
           initialCenter={{ lat: 34.058984, lng: -117.81954 }}
         />
+        <p>Test</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }

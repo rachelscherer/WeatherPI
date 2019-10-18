@@ -1,3 +1,10 @@
 .App {
   text-align: center;
+  background-image: radial-gradient(
+    farthest-corner at 100% 200px,
+    #1e1e1e,
+    #0c0c0c 1800px,
+    #0c0c0c
+  );
+  color: #ffdd00;
 }
