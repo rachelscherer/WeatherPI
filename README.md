@@ -6,7 +6,7 @@
 2. Clone the repository
 3. Open up the command prompt
 4. Run command:
-    1. 'cd *directory*\WeatherPI'
-    2. 'npm install react-scripts react-bootstrap google-map-react'
-    3. 'npm run start'
+    1. 'code(cd *directory*\WeatherPI)'
+    2. 'code(npm install react-scripts react-bootstrap google-map-react)'
+    3. 'code(npm run start)'
 5. After opening your IDE and making any edits to the code, you will automatically see changes.
