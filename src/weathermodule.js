@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
+import "./weathermodule.css";
 
 //Set the width and height of the map
 const mapStyles = {
@@ -12,7 +13,6 @@ class Weathermodule extends Component {
     return (
       <div className="weatherModule">
         <Map
-          className="mapStyle"
           google={this.props.google}
           zoom={17}
           style={mapStyles}
