@@ -7,10 +7,10 @@
 3. Open up the command prompt
 4. Run command:
 
-'''
+```
 cd *directory*\WeatherPI
 npm install react-scripts react-bootstrap google-map-react
 npm run start
-'''
+```
 
 5. After opening your IDE and making any edits to the code, you will automatically see changes.
