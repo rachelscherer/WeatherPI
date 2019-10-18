@@ -4,7 +4,7 @@
 
 1. [Download and install node.js](https://nodejs.org/en/ "Download and install node.js")
 2. Clone the repository
-3. Open up the command prompt
+3. Open up your system console.
 4. Run command:
 
 ```
