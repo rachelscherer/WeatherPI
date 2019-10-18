@@ -1,24 +1,27 @@
-import React, { Component } from 'react';
-import { Map, mapStyles, GoogleApiWrapper } from 'google-maps-react';
+import React, { Component } from "react";
+import { Map, GoogleApiWrapper } from "google-maps-react";
+
+//Set the width and height of the map
+const mapStyles = {
+  width: "40vh",
+  height: "40vh"
+};
 
 class Weathermodule extends Component {
-    render() {
-        return (
-            <div>
-                <p>This is the weather module</p>
-                <Map
+  render() {
+    return (
+      <div>
+        <Map
           google={this.props.google}
-          zoom={8}
+          zoom={13}
           style={mapStyles}
-          initialCenter={{ lat: 47.444, lng: -122.176}}
+          initialCenter={{ lat: 34.058984, lng: -117.81954 }}
         />
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
-{/*
+
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyA6eUcJv6lgP5Q96Wu6fSOhv36BbfzGOSU'
-  })(MapContainer);
-  */}
-export default Weathermodule;
+  apiKey: "AIzaSyBD23oGZK3873DBTOKGNfLz80hQCE9G_w4"
+})(Weathermodule);
