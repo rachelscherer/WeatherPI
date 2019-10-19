@@ -6,9 +6,17 @@
     #0c0c0c 1800px,
     #0c0c0c
   );
+  color: #fcfcfc;
+  height: 100vh;
+}
+
+hr {
+  border-image-source: linear-gradient(90deg, #008f68, #ffdd00);
+  border-image-slice: 1;
 }
 
 .header {
+  padding-top: 150px;
   font-family: "Catamaran", sans-serif;
   font-weight: 900;
   font-size: 2.7em;
