@@ -16,7 +16,17 @@ class Weathermodule extends Component {
       <div className="weatherModule">
         <Container>
           <Row>
-            <Col md={12} lg={6}>
+          <Col lg={12, {order:2}} xl={6,{order:2}}>
+              <h2>Stats</h2>
+              <br />
+              <p className="stats">Temperature: xxxxxx</p>
+              <p className="stats">Humidity: xxxxxx</p>
+              <p className="stats">Wind Speed: xxxxxx</p>
+              <p className="stats">Stat 4: xxxxxx</p>
+              <p className="stats">Stat 5: xxxxxx</p>
+              <p className="stats">Stat 6: xxxxxx</p>
+            </Col>
+            <Col lg={12, {order:1}} xl={6,{order:1}}>
               <div className="location">
                 <h2>Location</h2>
                 <br />
@@ -29,16 +39,6 @@ class Weathermodule extends Component {
                 />
               </div>
             </Col>
-            <Col md={12} lg={6}>
-              <h2>Stats</h2>
-              <br />
-              <p className="stats">Temperature: xxxxxx</p>
-              <p className="stats">Humidity: xxxxxx</p>
-              <p className="stats">Wind Speed: xxxxxx</p>
-              <p className="stats">Stat 4: xxxxxx</p>
-              <p className="stats">Stat 5: xxxxxx</p>
-              <p className="stats">Stat 6: xxxxxx</p>
-            </Col>
           </Row>
         </Container>
       </div>
@@ -46,6 +46,7 @@ class Weathermodule extends Component {
   }
 }
 
+//Oops!
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyBD23oGZK3873DBTOKGNfLz80hQCE9G_w4"
+  apiKey: ""
 })(Weathermodule);
