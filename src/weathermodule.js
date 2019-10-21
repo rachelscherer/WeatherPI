@@ -17,7 +17,7 @@ class Weathermodule extends Component {
         <Container>
           <Row>
           <Col lg={12, {order:2}} xl={6,{order:2}}>
-              <h2>Stats</h2>
+              <h2>Readings</h2>
               <br />
               <p className="stats">Temperature: xxxxxx</p>
               <p className="stats">Humidity: xxxxxx</p>
