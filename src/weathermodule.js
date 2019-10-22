@@ -3,20 +3,40 @@ import { Map, GoogleApiWrapper } from "google-maps-react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./weathermodule.css";
 
-//Set the width and height of the map
-const mapStyles = {
-  width: "395px",
-  height: "395px",
-  margin: "0 0 0 50px"
-};
+//Set the default width and height of the map
+let mapStyles = { width: 395, height: 395 };
 
+//Set smallMap to false when the page loads
 class Weathermodule extends Component {
+  constructor() {
+    super();
+    this.state = { smallMap: false, width: 395, height: 395 };
+  }
+
+  //If the viewport width < 992px, set "smallMap" to true and change the mapStyles element to true.
+  componentDidMount() {
+    window.addEventListener("resize", () => {
+      const smallWindow = window.innerWidth < 992;
+      if (smallWindow === true) {
+        this.setState({ smallMap: true });
+        mapStyles = { width: 300, height: 300 };
+      } else {
+        this.setState({ smallMap: false });
+        mapStyles = { width: 395, height: 395 };
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize");
+  }
+
   render() {
     return (
       <div className="weatherModule">
         <Container>
           <Row>
-          <Col lg={12, {order:2}} xl={6,{order:2}}>
+            <Col lg={(12, { order: 2 })} xl={(6, { order: 2 })}>
               <h2>Readings</h2>
               <br />
               <p className="stats">Temperature: xxxxxx</p>
@@ -26,17 +46,23 @@ class Weathermodule extends Component {
               <p className="stats">Stat 5: xxxxxx</p>
               <p className="stats">Stat 6: xxxxxx</p>
             </Col>
-            <Col lg={12, {order:1}} xl={6,{order:1}}>
+            <Col lg={(12, { order: 1 })} xl={(6, { order: 1 })}>
               <div className="location">
                 <h2>Location</h2>
                 <br />
-                <Map
-                  google={this.props.google}
-                  zoom={17}
-                  style={mapStyles}
-                  initialCenter={{ lat: 34.058984, lng: -117.81954 }}
-                  disableDefaultUI={true}
-                />
+                <div
+                  className={
+                    this.state.smallMap ? "smallMapContainer" : "mapContainer"
+                  }
+                >
+                  <Map
+                    google={this.props.google}
+                    zoom={17}
+                    style={mapStyles}
+                    initialCenter={{ lat: 34.058984, lng: -117.81954 }}
+                    disableDefaultUI={true}
+                  />
+                </div>
               </div>
             </Col>
           </Row>
