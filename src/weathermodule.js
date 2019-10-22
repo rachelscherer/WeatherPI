@@ -10,7 +10,7 @@ let mapStyles = { width: 395, height: 395 };
 class Weathermodule extends Component {
   constructor() {
     super();
-    this.state = { smallMap: false, width: 395, height: 395 };
+    this.state = { smallMap: false};
   }
 
   //If the viewport width < 992px, set "smallMap" to true and change the mapStyles element to true.
