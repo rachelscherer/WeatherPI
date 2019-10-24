@@ -1,0 +1,14 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "weatherpi-prod-20191023164017-authRole",
+            "UnauthRoleArn": "arn:aws:iam::281719997878:role/weatherpi-prod-20191023164017-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::281719997878:role/weatherpi-prod-20191023164017-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "weatherpi-prod-20191023164017-deployment",
+            "UnauthRoleName": "weatherpi-prod-20191023164017-unauthRole",
+            "StackName": "weatherpi-prod-20191023164017",
+            "StackId": "arn:aws:cloudformation:us-east-1:281719997878:stack/weatherpi-prod-20191023164017/787cb0d0-f5ee-11e9-93f5-0ab87eb901cc"
+        }
+    }
+}

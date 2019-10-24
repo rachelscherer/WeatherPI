@@ -3,8 +3,22 @@ import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Weathermodule from "./weathermodule";
+import Amplify, { API } from 'aws-amplify';
+import aws_exports from './aws-exports';
+
+Amplify.configure(aws_exports);
+
+let apiName = 'sampleCloudApi';
+let path = '/test';
 
 class App extends Component {
+
+  componentDidMount(){
+    API.get(apiName, path).then(response => {
+      console.log(response)
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
