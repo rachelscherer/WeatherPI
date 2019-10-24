@@ -9,6 +9,11 @@
             "UnauthRoleName": "weatherpi-prod-20191023164017-unauthRole",
             "StackName": "weatherpi-prod-20191023164017",
             "StackId": "arn:aws:cloudformation:us-east-1:281719997878:stack/weatherpi-prod-20191023164017/787cb0d0-f5ee-11e9-93f5-0ab87eb901cc"
+        },
+        "categories": {
+            "auth": {
+                "cognito515637c7": {}
+            }
         }
     }
 }

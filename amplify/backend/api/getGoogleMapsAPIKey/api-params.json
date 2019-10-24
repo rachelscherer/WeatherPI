@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/getGoogleMapsAPIKey",
+            "lambdaFunction": "getAPI",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "getGoogleMapsAPIKey",
+    "apiName": "getGoogleMapsAPIKey",
+    "functionArns": [
+        {
+            "lambdaFunction": "getAPI"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "weatherpi-prod-20191023164017-authRole",
+        "unAuthRoleName": "weatherpi-prod-20191023164017-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "getAPI",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
